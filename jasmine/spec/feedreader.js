@@ -35,7 +35,7 @@ $(function () {
             allFeeds.forEach(function (element) {
                 expect(element.url).toBeDefined();
             }, this);
-        })
+        });
 
 
         /* TODO: Write a test that loops through each feed
@@ -48,7 +48,7 @@ $(function () {
                 expect(element.name.length).not.toBe(0);
 
             }, this);
-        })
+        });
     });
 
 
