@@ -34,6 +34,8 @@ $(function () {
         it('urls are defined', function () {
             allFeeds.forEach(function (element) {
                 expect(element.url).toBeDefined();
+                expect(element.url.length).not.toBe(0);
+                
             }, this);
         });
 
@@ -61,7 +63,7 @@ $(function () {
          * hiding/showing of the menu element.
          */
         it('hidden is on', function () {
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
 
@@ -73,10 +75,10 @@ $(function () {
          */
         it('toogle menu class', function () {
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(false);
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
     });
@@ -93,7 +95,7 @@ $(function () {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
         it("check feed is loaded", function (done) {
-            expect($('.feed').children().length).toBeGreaterThan(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
             done();
         });
     });
