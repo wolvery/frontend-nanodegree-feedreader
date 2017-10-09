@@ -22,6 +22,6 @@ This app is a feed news which depends basically of a list of URLs. Some of the t
 
 ## How can I run this project, now?
 
-* You can acces it by this URL:
+* You can acces it by this URL:  https://wolvery.github.io/frontend-nanodegree-feedreader/.
 * Perform the download of this repository and run index.html
 
